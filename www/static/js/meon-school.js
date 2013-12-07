@@ -20,13 +20,14 @@ school.submit = function (e) {
     $('.false-answer').hide();
     clearTimeout(school.alertTimer);
 
-    if (school.input().val() == school.answer) {
+    if (trim(school.input().val()) == school.answer) {
         $('.good-answer').show();
         school.giveNewQuestion();        
         school.initFocus();
         school.answerCorrect++;
     }
     else {
+        $('#question-el').html(school.questionHtml);
         $('.false-answer').show();
     }
 
@@ -50,8 +51,9 @@ school.giveNewQuestion = function () {
     while (1) {
         var question = school.new_question();
         if (school.answer != question.answer) {
-            $('#question-el').html(question.html);
+            school.questionHtml = question.html;
             school.answer = question.answer;
+            $('#question-el').html(school.questionHtml);
             break;
         }
     }
@@ -68,3 +70,5 @@ school.showScore = function () {
         +'('+(Math.floor(school.answerCorrect*100/(school.answerCount)))+'%)'
     );
 }
+
+trim = function(s){return s.replace(/^\s+|\s+$/g, '');};
