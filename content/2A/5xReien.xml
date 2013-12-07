@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page
+    xmlns:xhtml="http://www.w3.org/1999/xhtml"
+    xmlns="http://web.meon.eu/"
+    xmlns:w="http://web.meon.eu/"
+>
+
+<meta>
+    <title>2A</title>
+    <head xmlns:xhtml="http://www.w3.org/1999/xhtml">
+        <link href="/static/css/navbar-static-top.css" rel="stylesheet"/>
+    </head>
+</meta>
+
+<content><div xmlns="http://www.w3.org/1999/xhtml" class="wrap">
+
+    <form class="question">
+    <table width="100%" height="100%">
+        <tr><td align="center" id="question-el"></td></tr>
+    </table>
+    </form>
+
+    <!-- Static navbar -->
+    <div class="navbar navbar-default navbar-static-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/">Schule.meon.at</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="dropdown active">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Reien <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="5xReien">5x</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+    <div class="container">
+    <div id="score"></div>
+    <h1>5x Reien</h1>
+    <div class="alert alert-danger alert-dismissable false-answer">
+        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+        <strong>Falsch!</strong> Versuche es noch einmal.
+    </div>
+    <div class="alert alert-success alert-dismissable good-answer">
+        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+        <strong>Richtig!</strong>
+    </div>
+    </div>
+
+<script>
+    school.new_question = function () {
+        var num = Math.floor(Math.random()*11);
+        return {
+            html: '<h1>'+num+' x 5 = <input type="text" class="width3"/></h1>',
+            answer: num*5
+        };
+    };
+</script>
+
+</div></content>
+
+</page>

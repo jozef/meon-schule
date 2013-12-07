@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page
+    xmlns:xhtml="http://www.w3.org/1999/xhtml"
+    xmlns="http://web.meon.eu/"
+    xmlns:w="http://web.meon.eu/"
+>
+
+<meta>
+    <title>Schule.meon.at</title>
+</meta>
+
+<content><div xmlns="http://www.w3.org/1999/xhtml">
+
+<div class="container">
+
+<h1>Willkommen bei Schule.meon.at!</h1>
+
+<ul>
+    <li>
+        <a href="2A/">2A/</a>
+    </li>
+</ul>
+
+</div>
+
+</div></content>
+
+</page>

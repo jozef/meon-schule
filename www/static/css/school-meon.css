@@ -1,0 +1,19 @@
+form.question table {
+    position: absolute;
+}
+
+input.width3 {
+    width: 3em;
+}
+
+.false-answer {
+    display: none;
+}
+
+.good-answer {
+    display: none;
+}
+
+#score {
+    float: right;
+}
