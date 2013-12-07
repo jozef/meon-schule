@@ -62,7 +62,7 @@
     school.new_question = function () {
         var num = Math.floor(Math.random()*11);
         return {
-            html: '<h1>'+num+' x 5 = <input type="text" class="width3"/></h1>',
+            html: '<h1>'+num+' x 5 = <input type="number" class="width3"/></h1>',
             answer: num*5
         };
     };
