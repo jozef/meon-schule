@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page
+    xmlns:xhtml="http://www.w3.org/1999/xhtml"
+    xmlns="http://web.meon.eu/"
+    xmlns:w="http://web.meon.eu/"
+>
+
+<meta>
+    <title>2A x bis 100</title>
+    <head xmlns:xhtml="http://www.w3.org/1999/xhtml">
+        <link href="/static/css/navbar-static-top.css" rel="stylesheet"/>
+    </head>
+</meta>
+
+<content><div xmlns="http://www.w3.org/1999/xhtml" class="wrap">
+    <w:top-menu-a2/>
+    <w:question title="x bis 100"/>
+    <script>
+        school.new_question = function () {
+            var num = Math.floor(Math.random()*11);
+            var num2 = Math.floor(Math.random()*11);
+            return {
+                html: num+' x '+num2+' = <input type="number" class="width3"/>',
+                answer: num*num2
+            };
+        };
+    </script>
+</div></content>
+
+</page>

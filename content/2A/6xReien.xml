@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page
+    xmlns:xhtml="http://www.w3.org/1999/xhtml"
+    xmlns="http://web.meon.eu/"
+    xmlns:w="http://web.meon.eu/"
+>
+
+<meta>
+    <title>2A 6x Reien</title>
+    <head xmlns:xhtml="http://www.w3.org/1999/xhtml">
+        <link href="/static/css/navbar-static-top.css" rel="stylesheet"/>
+    </head>
+</meta>
+
+<content><div xmlns="http://www.w3.org/1999/xhtml" class="wrap">
+    <w:top-menu-a2/>
+    <w:question title="6x Reien"/>
+    <script>
+        school.new_question = function () {
+            var num = Math.floor(Math.random()*11);
+            return {
+                html: num+' x 6 = <input type="number" class="width3"/>',
+                answer: num*6
+            };
+        };
+    </script>
+</div></content>
+
+</page>

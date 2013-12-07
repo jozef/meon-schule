@@ -31,3 +31,7 @@ input.width3 {
     text-align: center;
     font-size: 3em;
 }
+
+.jumbotron ul {
+    line-height: 1em;
+}

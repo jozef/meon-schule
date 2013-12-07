@@ -33,9 +33,19 @@
           <ul class="nav navbar-nav">
             <li><a href="/2A/">2A</a></li>
             <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Reien <b class="caret"></b></a>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Multiplikation <b class="caret"></b></a>
               <ul class="dropdown-menu">
+                <li><a href="2xReien">2x</a></li>
+                <li><a href="3xReien">3x</a></li>
+                <li><a href="4xReien">4x</a></li>
                 <li><a href="5xReien">5x</a></li>
+                <li><a href="6xReien">6x</a></li>
+                <li><a href="7xReien">7x</a></li>
+                <li><a href="8xReien">8x</a></li>
+                <li><a href="9xReien">9x</a></li>
+                <li><a href="10xReien">10x</a></li>
+                <li class="divider"></li>
+                <li><a href="xBis100">x bis 100</a></li>
               </ul>
             </li>
           </ul>
