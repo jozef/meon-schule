@@ -1,3 +1,8 @@
+footer {
+    margin-top: 2em;
+    border-top: 1px solid grey;
+    text-align: center;
+}
 
 input.width3 {
     width: 3em;
@@ -11,8 +16,9 @@ input.width3 {
     left: 0;
     top: 0;
     z-index: 100;
-    width: 100%;
+    width: 60%;
     text-align: center;
+    margin: 0 20%;
 }
 
 .false-answer {
@@ -23,11 +29,17 @@ input.width3 {
     display: none;
 }
 
-#score {
+#score, #timer {
     float: right;
+    padding-left: 2em;
+}
+
+.question-title {
+    margin-top: 0px;
 }
 
 #question-el {
+    margin-top: 1em;
     text-align: center;
     font-size: 3em;
 }

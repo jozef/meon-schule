@@ -29,8 +29,9 @@
         <strong>Richtig!</strong>
     </div>
     </div>
-    <div id="score"></div>
-    <h1><xsl:value-of select="./@title"/></h1>
+    <div id="timer"/>
+    <div id="score"/>
+    <h1 class="question-title"><xsl:value-of select="./@title"/></h1>
 
     <form class="question">
     <div id="question-el"></div>

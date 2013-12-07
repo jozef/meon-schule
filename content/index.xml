@@ -15,10 +15,16 @@
     <h1>Willkommen bei Schule.meon.at!</h1>
     <ul>
         <li>
-            <a href="2A/">2A</a>
+            <a href="2A/">2A VS</a>
         </li>
     </ul>
+
+<footer>
+    <div>powered by <a href="http://www.meon.at/">meon</a></div>
+</footer>
+
 </div><!-- container -->
+
 
 </div></content>
 

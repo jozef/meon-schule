@@ -1,14 +1,19 @@
 var school = new Object();
 
+trim = function(s){return s.replace(/^\s+|\s+$/g, '');};
+epoch = function () { return Math.floor((new Date).getTime()/1000); }
+
 school.answer = null;
 school.alertTimer = null;
 school.answerCount = 0;
 school.answerCorrect = 0;
+school.startEpoch = epoch();
 
 $(document).ready(function(){
     $('form.question').submit(school.submit);
     school.initFocus();
     school.giveNewQuestion();
+    school.updateTimer();
 });
 
 school.submit = function (e) {
@@ -71,4 +76,20 @@ school.showScore = function () {
     );
 }
 
-trim = function(s){return s.replace(/^\s+|\s+$/g, '');};
+school.updateTimer = function () {
+    var seconds = epoch() - school.startEpoch;
+    $('#timer').text(format_seconds(seconds));
+    setTimeout(school.updateTimer, 1000);
+}
+
+format_seconds = function (total_sec) {
+    var seconds = total_sec % 60;
+    var minutes = Math.floor((total_sec / 60)) % 60;
+    var hours = Math.floor((total_sec / 60 / 60));
+    return format_2decimal(hours)+':'+format_2decimal(minutes)+':'+format_2decimal(seconds);
+}
+
+format_2decimal = function (d) {
+    if (d < 10) { d = '0'+d };
+    return d;
+}
