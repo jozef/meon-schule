@@ -1,9 +1,18 @@
-form.question table {
-    position: absolute;
-}
 
 input.width3 {
     width: 3em;
+}
+
+.alerts {
+    position: relative;
+}
+.alert {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+    text-align: center;
 }
 
 .false-answer {
@@ -16,4 +25,8 @@ input.width3 {
 
 #score {
     float: right;
+}
+
+#question-el {
+    text-align: center;
 }
