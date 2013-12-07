@@ -10,6 +10,8 @@
 >
 
 <xsl:import href="lib/html-page.xsl" />
+<xsl:import href="lib/menu.xsl" />
+<xsl:import href="lib/question.xsl" />
 
 <xsl:output
     method="html"
@@ -19,6 +21,7 @@
 />
 
 <xsl:template match="/w:page">
+    <xsl:call-template name="top-menu"/>
     <xsl:apply-templates select="w:content/xhtml:*"/>
 </xsl:template>
 
