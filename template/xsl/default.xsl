@@ -21,7 +21,6 @@
 />
 
 <xsl:template match="/w:page">
-    <xsl:call-template name="top-menu"/>
     <xsl:apply-templates select="w:content/xhtml:*"/>
 </xsl:template>
 

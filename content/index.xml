@@ -12,16 +12,13 @@
 <content><div xmlns="http://www.w3.org/1999/xhtml">
 
 <div class="container">
-
-<h1>Willkommen bei Schule.meon.at!</h1>
-
-<ul>
-    <li>
-        <a href="2A/">2A/</a>
-    </li>
-</ul>
-
-</div>
+    <h1>Willkommen bei Schule.meon.at!</h1>
+    <ul>
+        <li>
+            <a href="2A/">2A</a>
+        </li>
+    </ul>
+</div><!-- container -->
 
 </div></content>
 

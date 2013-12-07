@@ -13,7 +13,7 @@
 </meta>
 
 <content><div xmlns="http://www.w3.org/1999/xhtml" class="wrap">
-
+    <w:top-menu-a2/>
     <w:question title="5x Reien"/>
     <script>
         school.new_question = function () {
@@ -24,7 +24,6 @@
             };
         };
     </script>
-
 </div></content>
 
 </page>

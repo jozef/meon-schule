@@ -16,7 +16,7 @@
     doctype-system="about:legacy-compat"
 />
 
-<xsl:template name="top-menu">
+<xsl:template match="w:top-menu-a2">
     <!-- Static navbar -->
     <div class="navbar navbar-default navbar-static-top" role="navigation">
       <div class="container">
@@ -31,6 +31,7 @@
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
+            <li><a href="/2A/">2A</a></li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">Reien <b class="caret"></b></a>
               <ul class="dropdown-menu">
