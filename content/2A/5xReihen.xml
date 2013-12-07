@@ -6,7 +6,7 @@
 >
 
 <meta>
-    <title>2A 9x Reien</title>
+    <title>2A 5x Reihen</title>
     <head xmlns:xhtml="http://www.w3.org/1999/xhtml">
         <link href="/static/css/navbar-static-top.css" rel="stylesheet"/>
     </head>
@@ -14,13 +14,13 @@
 
 <content><div xmlns="http://www.w3.org/1999/xhtml" class="wrap">
     <w:top-menu-a2/>
-    <w:question title="9x Reien"/>
+    <w:question title="5x Reihen"/>
     <script>
         school.new_question = function () {
             var num = Math.floor(Math.random()*11);
             return {
-                html: num+' x 9 = <input type="number" class="width3"/>',
-                answer: num*9
+                html: num+' x 5 = <input type="number" class="width3"/>',
+                answer: num*5
             };
         };
     </script>
