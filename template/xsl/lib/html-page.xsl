@@ -46,6 +46,7 @@
       <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
     <![endif]-->
 
+    <link href="/static/css/navbar-static-top.css" rel="stylesheet"/>
     <link href="/static/css/school-meon.css" rel="stylesheet"/>
 
     <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
