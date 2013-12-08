@@ -9,20 +9,15 @@ school.answerCount = 0;
 school.answerCorrect = 0;
 school.startEpoch = epoch();
 
-school.smiley_index = 4;
+school.smiley_index = 3;
 school.smileys = [
     '/static/img/smileys/loving.png',
     '/static/img/smileys/loving.png',
     '/static/img/smileys/happy.png',
     '/static/img/smileys/happy.png',
-    '/static/img/smileys/happy.png',
-    '/static/img/smileys/winking.png',
     '/static/img/smileys/winking.png',
     '/static/img/smileys/surprised.png',
-    '/static/img/smileys/surprised.png',
     '/static/img/smileys/alarmed.png',
-    '/static/img/smileys/alarmed.png',
-    '/static/img/smileys/exploded.png',
     '/static/img/smileys/exploded.png'
 ];
 
