@@ -47,3 +47,8 @@ input.width3 {
 .jumbotron ul {
     line-height: 1em;
 }
+
+.smiley {
+    text-align: center;
+    margin: 1em;
+}

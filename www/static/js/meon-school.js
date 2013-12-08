@@ -9,6 +9,23 @@ school.answerCount = 0;
 school.answerCorrect = 0;
 school.startEpoch = epoch();
 
+school.smiley_index = 4;
+school.smileys = [
+    '/static/img/smileys/loving.png',
+    '/static/img/smileys/loving.png',
+    '/static/img/smileys/happy.png',
+    '/static/img/smileys/happy.png',
+    '/static/img/smileys/happy.png',
+    '/static/img/smileys/winking.png',
+    '/static/img/smileys/winking.png',
+    '/static/img/smileys/surprised.png',
+    '/static/img/smileys/surprised.png',
+    '/static/img/smileys/alarmed.png',
+    '/static/img/smileys/alarmed.png',
+    '/static/img/smileys/exploded.png',
+    '/static/img/smileys/exploded.png'
+];
+
 $(document).ready(function(){
     $('form.question').submit(school.submit);
     school.initFocus();
@@ -30,10 +47,16 @@ school.submit = function (e) {
         school.giveNewQuestion();        
         school.initFocus();
         school.answerCorrect++;
+        if (school.smiley_index > 0) {
+            school.smiley_index--;
+        }
     }
     else {
         $('#question-el').html(school.questionHtml);
         $('.false-answer').show();
+        if (school.smiley_index < school.smileys.length-1) {
+            school.smiley_index++;
+        }
     }
 
     school.alertTimer = setTimeout(function() {
@@ -42,6 +65,7 @@ school.submit = function (e) {
     },2000);
 
     school.showScore();
+    school.showSmiley();
 }
 
 school.initFocus = function () {
@@ -92,4 +116,8 @@ format_seconds = function (total_sec) {
 format_2decimal = function (d) {
     if (d < 10) { d = '0'+d };
     return d;
+}
+
+school.showSmiley = function () {
+    $('.smiley img').attr('src', school.smileys[school.smiley_index]);
 }

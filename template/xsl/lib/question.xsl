@@ -37,6 +37,8 @@
     <div id="question-el"></div>
     </form>
 
+    <div class="smiley"><img src="/static/img/smileys/happy.png"/></div>
+
     </div><!-- container -->
 </xsl:template>
 
