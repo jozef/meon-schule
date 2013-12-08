@@ -8,6 +8,10 @@ input.width3 {
     width: 3em;
 }
 
+input.width6 {
+    width: 6em;
+}
+
 .alerts {
     position: relative;
 }

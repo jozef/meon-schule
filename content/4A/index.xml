@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page
+    xmlns:xhtml="http://www.w3.org/1999/xhtml"
+    xmlns="http://web.meon.eu/"
+    xmlns:w="http://web.meon.eu/"
+>
+
+<meta>
+    <title>4A</title>
+</meta>
+
+<content><div xmlns="http://www.w3.org/1999/xhtml">
+    <w:top-menu-a2/>
+    <div class="container">
+      <div class="jumbotron">
+        <h1>Schulübungen</h1>
+        <p>für 4A - VS Felbigergasse 97, 1140 Wien</p>
+        <ul>
+            <li><a href="schularbeit2">Schularbeit 2</a></li>
+        </ul>
+      </div>
+    </div> <!-- /container -->
+</div></content>
+
+</page>

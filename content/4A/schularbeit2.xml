@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page
+    xmlns:xhtml="http://www.w3.org/1999/xhtml"
+    xmlns="http://web.meon.eu/"
+    xmlns:w="http://web.meon.eu/"
+>
+
+<meta>
+    <title>4A Schularbeit 2</title>
+</meta>
+
+<content><div xmlns="http://www.w3.org/1999/xhtml">
+    <w:top-menu-a4/>
+    <w:question title="4A Schularbeit 2"/>
+    <script>
+        var schularbeit2_questions = [
+            function () {
+                var num = school.randomFromTo(10000,100000);
+                var num2 = school.randomFromTo(10000,num);
+                return {
+                    html: 'Subtrahiere<br/>'+school.num2deu_cardinal(num)+'<br/>und<br/>'+school.num2deu_cardinal(num2)+'<br/><input type="number" class="width6"/>',
+                    answer: num-num2
+                };
+            },
+            function () {
+                var num = school.randomFromTo(10000,100000);
+                var num2 = school.randomFromTo(10000,100000);
+                return {
+                    html: 'Addiere<br/>'+school.num2deu_cardinal(num)+'<br/>und<br/>'+school.num2deu_cardinal(num2)+'<br/><input type="number" class="width6"/>',
+                    answer: num+num2
+                };
+            },
+            function () {
+                var num = school.randomFromTo(1000,100000);
+                var num2 = school.randomFromTo(1000,100000);
+                return {
+                    html: 'Runder auf Tausender und addiere: '+num+' und '+num2+' <input type="number" class="width6"/>',
+                    answer: (Math.round(num/1000)+Math.round(num2/1000))*1000
+                };
+            },
+            function () {
+                var num = school.randomFromTo(11,99);
+                var num2 = school.randomFromTo(75,150);
+                return {
+                    html: 'Eine Kaffemaschine kostet '+num2+' €. Im December wurden '+num+' Stück verkauft. Wie viel Geld wurde eingenommen? <input type="number" class="width6"/>',
+                    answer: num*num2
+                };
+            },
+            function () {
+                var num = school.randomFromTo(2,10);
+                var num2 = school.randomFromTo(500,1000);
+                return {
+                    html: 'Die VS Felbigergasse kauft '+num+' Computer um '+num*num2+' €. Wie viel kostet ein Computer? <input type="number" class="width6"/>',
+                    answer: num2
+                };
+            },
+            function () {
+                var num = school.randomFromTo(10,1000);
+                var num2 = school.randomFromTo(10,100);
+                return {
+                    html: 'Multipliziere '+num+' und '+num2+'. <input type="number" class="width3"/>',
+                    answer: num*num2
+                };
+            },
+            function () {
+                var num = school.randomFromTo(200,500000);
+                return {
+                    html: 'Wie viel ist die Hälfte von '+num*2+' <input type="number" class="width6"/>',
+                    answer: num
+                };
+            },
+            function () {
+                var num = school.randomFromTo(40000,60000);
+                var num2 = school.randomFromTo(10000,30000);
+                var num3 = school.randomFromTo(3000,8000);
+
+                return {
+                    html: 'Frau Katarina hat '+num+' auf ihre Sparbuch. Sie möchte ein Auto um '+num2+' und ein Motorrad im '+num3+' kaufen. Wie viel guthaben har sie noch? <input type="number" class="width6"/>',
+                    answer: num-num2-num3
+                };
+            }
+        ];
+        school.new_question = function () {
+            var index = Math.floor(Math.random()*schularbeit2_questions.length);
+            return schularbeit2_questions[index]();
+        };
+    </script>
+</div></content>
+
+</page>

@@ -14,9 +14,8 @@
 <div class="container">
     <h1>Willkommen bei Schule.meon.at!</h1>
     <ul>
-        <li>
-            <a href="2A/">2A VS</a>
-        </li>
+        <li><a href="2A/">2A VS</a></li>
+        <li><a href="4A/">4A VS</a></li>
     </ul>
 
 <p>Sourcecode → <a href="https://github.com/jozef/meon-schule">https://github.com/jozef/meon-schule</a></p>

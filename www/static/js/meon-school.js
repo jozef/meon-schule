@@ -142,3 +142,56 @@ format_2decimal = function (d) {
 school.showSmiley = function () {
     $('.smiley img').attr('src', school.smileys[school.smiley_index]);
 }
+
+school.randomFromTo = function (from,to) {
+    return Math.floor(Math.random()*(to-from+1))+from;
+}
+
+school.num2deu_cardinal = function ($positive) {
+    // thanks to PetaMem - Lingua-DEU-Num2Word → http://search.cpan.org/perldoc?Lingua%3A%3ADEU%3A%3ANum2Word
+    var $tokens1 = ['null', 'ein', 'zwei', 'drei', 'vier', 'fünf', 'sechs', 'sieben', 'acht', 'neun', 'zehn', 'elf', 'zwölf'];
+    var $tokens2 = ['zwanzig', 'dreissig', 'vierzig', 'fünfzig', 'sechzig', 'siebzig', 'achtzig', 'neunzig', 'hundert'];
+
+    if ($positive >= 0 && $positive < 13) return $tokens1[$positive]; // 0 .. 12
+    if ($positive == 16) return 'sechzehn';                  // 16 exception
+    if ($positive == 17) return 'siebzehn';                  // 17 exception
+    if ($positive > 12 && $positive < 20) return $tokens1[$positive-10] + 'zehn'; // 13 .. 19
+
+    var $out = '';     // string for return value construction
+    var $one_idx;      // index for tokens1 array
+    var $remain;       // remainder
+
+    if ($positive > 19 && $positive < 101) {              // 20 .. 100
+        $one_idx = Math.floor($positive / 10);
+        $remain  = $positive % 10;
+
+        if ($remain) $out  = $tokens1[$remain]+'und';
+        $out += $tokens2[$one_idx - 2];
+    }
+    else if ($positive > 100 && $positive < 1000) {       // 101 .. 999
+        $one_idx = Math.floor($positive / 100);
+        $remain  = $positive % 100;
+
+        $out  = $tokens1[$one_idx]+'hundert';
+        $out += $remain ? school.num2deu_cardinal($remain) : '';
+    }
+    else if ($positive > 999 && $positive < 1000000) {  // 1000 .. 999_999
+        $one_idx = Math.floor($positive / 1000);
+        $remain  = $positive % 1000;
+
+        $out  = school.num2deu_cardinal($one_idx)+'tausend';
+        $out += $remain ? school.num2deu_cardinal($remain) : '';
+    }
+    else if (   $positive > 999999
+           && $positive < 1000000000) {                 // 1_000_000 .. 999_999_999
+        $one_idx = Math.floor($positive / 1000000);
+        $remain  = $positive % 1000000;
+        var $one  = $one_idx == 1 ? 'e' : '';
+
+        $out  = school.num2deu_cardinal($one_idx) + $one + ' million';
+        if ($one_idx > 1) $out += 'en';
+        $out += $remain ? ' ' + school.num2deu_cardinal($remain) : '';
+    }
+
+    return $out;
+}
