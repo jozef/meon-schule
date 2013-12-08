@@ -20,6 +20,7 @@ school.smileys = [
     '/static/img/smileys/winking.png',
     '/static/img/smileys/surprised.png',
     '/static/img/smileys/alarmed.png',
+    '/static/img/smileys/unhappy.png',
     '/static/img/smileys/exploded.png'
 ];
 
@@ -97,6 +98,7 @@ school.smileyMoodUp = function () {
         school.smiley_index--;
     }
     school.showSmiley();
+    school.smileyMoodTimer();
 }
 
 school.smileyMoodDown = function () {
@@ -104,6 +106,7 @@ school.smileyMoodDown = function () {
         school.smiley_index++;
     }
     school.showSmiley();
+    school.smileyMoodTimer();
 }
 
 school.showScore = function () {
