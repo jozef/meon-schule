@@ -13,6 +13,7 @@
     <w:top-menu-a2/>
     <w:question title="x bis 100"/>
     <script>
+        school.smiley_timeout = 5000;
         school.new_question = function () {
             var num = Math.floor(Math.random()*11);
             var num2 = Math.floor(Math.random()*11);

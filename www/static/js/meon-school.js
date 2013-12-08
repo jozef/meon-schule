@@ -10,6 +10,8 @@ school.answerCorrect = 0;
 school.startEpoch = epoch();
 
 school.smiley_index = 3;
+school.smiley_timeout = null;
+school.smiley_timer = null;
 school.smileys = [
     '/static/img/smileys/loving.png',
     '/static/img/smileys/loving.png',
@@ -42,16 +44,12 @@ school.submit = function (e) {
         school.giveNewQuestion();        
         school.initFocus();
         school.answerCorrect++;
-        if (school.smiley_index > 0) {
-            school.smiley_index--;
-        }
+        school.smileyMoodUp();
     }
     else {
         $('#question-el').html(school.questionHtml);
         $('.false-answer').show();
-        if (school.smiley_index < school.smileys.length-1) {
-            school.smiley_index++;
-        }
+        school.smileyMoodDown();
     }
 
     school.alertTimer = setTimeout(function() {
@@ -60,7 +58,6 @@ school.submit = function (e) {
     },2000);
 
     school.showScore();
-    school.showSmiley();
 }
 
 school.initFocus = function () {
@@ -78,9 +75,35 @@ school.giveNewQuestion = function () {
             school.questionHtml = question.html;
             school.answer = question.answer;
             $('#question-el').html(school.questionHtml);
+            school.smileyMoodTimer();
+
             break;
         }
     }
+}
+
+school.smileyMoodTimer = function () {
+    clearTimeout(school.smiley_timer);
+    if (school.smiley_timeout) {
+        school.smiley_timer = setTimeout(function() {
+            school.smileyMoodDown();
+            school.smileyMoodTimer();
+        }, school.smiley_timeout);
+    }
+}
+
+school.smileyMoodUp = function () {
+    if (school.smiley_index > 0) {
+        school.smiley_index--;
+    }
+    school.showSmiley();
+}
+
+school.smileyMoodDown = function () {
+    if (school.smiley_index < school.smileys.length-1) {
+        school.smiley_index++;
+    }
+    school.showSmiley();
 }
 
 school.showScore = function () {
