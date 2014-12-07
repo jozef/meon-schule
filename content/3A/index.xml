@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page
+    xmlns:xhtml="http://www.w3.org/1999/xhtml"
+    xmlns="http://web.meon.eu/"
+    xmlns:w="http://web.meon.eu/"
+>
+
+<meta>
+    <title>3A</title>
+</meta>
+
+<content><div xmlns="http://www.w3.org/1999/xhtml">
+    <w:top-menu-a3/>
+    <div class="container">
+      <div class="jumbotron">
+        <h1>Schulübungen</h1>
+        <p>für 3A - VS Felbigergasse 97, 1140 Wien</p>
+        <ul>
+            <li>Minus
+                <ul>
+                    <li><a href="MinusBis1000">Minus bis 1000</a></li>
+                </ul>
+            </li>
+        </ul>
+      </div>
+    </div> <!-- /container -->
+</div></content>
+
+</page>

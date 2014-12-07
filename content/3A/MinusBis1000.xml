@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page
+    xmlns:xhtml="http://www.w3.org/1999/xhtml"
+    xmlns="http://web.meon.eu/"
+    xmlns:w="http://web.meon.eu/"
+>
+
+<meta>
+    <title>Minus bis 1000</title>
+</meta>
+
+<content><div xmlns="http://www.w3.org/1999/xhtml">
+    <w:top-menu-a3/>
+    <w:question title="Minus bis 1000"/>
+    <script>
+        school.smiley_timeout = 300000;
+        school.new_question = function () {
+            var num = Math.floor(Math.random()*1000);
+            var num2 = Math.floor(Math.random()*num);
+            return {
+                html: num+' - '+num2+' = <input type="number" class="width3"/>',
+                answer: num-num2
+            };
+        };
+    </script>
+</div></content>
+
+</page>
